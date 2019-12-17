@@ -32,8 +32,8 @@ class TravelJapan extends Component {
         super(props)
 
         this.state = {
-            data: data[0],
             count: 0,
+            menu: ['ABOUT', 'DISCOVER', 'PLAN YOUR TRIP'],
         }
     }
 
@@ -41,36 +41,35 @@ class TravelJapan extends Component {
         const count = this.state.count + 1;
         if (count < data.length) {
             this.setState({
-                data: data[count],
                 count: count,
             })
         }
         else {
             this.setState({
-                data: data[0],
                 count: 0,
             })
         }
     }
 
     previousPage = () => {
-        const count = this.state.count + data.length -1;
-        if(count < data.length){
+        const count = this.state.count + data.length - 1;
+        if (count < data.length) {
             this.setState({
-                data: data[count],
                 count: count,
             })
         }
-        else{
-            const count = this.state.count -1;
+        else {
+            const count = this.state.count - 1;
             this.setState({
-                data: data[count],
                 count: count,
             })
         }
     }
 
     render() {
+        const menu = this.state.menu.map((item, i) =>
+            <li key={i} ><a href="#" >{item}</a></li>
+        )
         return (
             <div>
                 <div className="japan-logo" >
@@ -78,17 +77,15 @@ class TravelJapan extends Component {
                 </div>
                 <div className="japan-menu" >
                     <ul className="japan-ul" >
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">DISCOVER</a></li>
-                        <li><a href="#">PLAN YOUR TRIP</a></li>
+                        {menu}
                     </ul>
                 </div>
                 <div className="japan-h1" >
-                    <h1>Explore<br />{this.state.data.placeName}</h1>
+                    <h1>Explore<br />{data[this.state.count].placeName}</h1>
                 </div>
-                <img className="japan-img" src={this.state.data.image} />
+                <img className="japan-img" src={data[this.state.count].image} />
                 <p className="japan-introduction" >
-                    {this.state.data.introduction}
+                    {data[this.state.count].introduction}
                 </p>
                 <div className="japan-btn" >
                     <div className="japan-previous" onClick={this.previousPage} >
