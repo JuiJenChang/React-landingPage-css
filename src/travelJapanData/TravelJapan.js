@@ -33,7 +33,6 @@ class TravelJapan extends Component {
 
         this.state = {
             count: 0,
-            menu: ['ABOUT', 'DISCOVER', 'PLAN YOUR TRIP'],
         }
     }
 
@@ -67,8 +66,11 @@ class TravelJapan extends Component {
     }
 
     render() {
-        const menu = this.state.menu.map((item, i) =>
-            <li key={i} ><a href="#" >{item}</a></li>
+        const menu = ['ABOUT', 'DISCOVER', 'PLAN YOUR TRIP'];
+        const menuMap = menu.map((item, i) =>
+            <li key={i} >
+                <a href="#" >{item}</a>
+            </li>
         )
         return (
             <div>
@@ -77,7 +79,7 @@ class TravelJapan extends Component {
                 </div>
                 <div className="japan-menu" >
                     <ul className="japan-ul" >
-                        {menu}
+                        {menuMap}
                     </ul>
                 </div>
                 <div className="japan-h1" >
