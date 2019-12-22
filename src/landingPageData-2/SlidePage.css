@@ -1,0 +1,137 @@
+.sp-left{
+    background: linear-gradient(#ff118080, #ff118080), url('http://andrewerrico.com/jura-panorama.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+.sp-left:hover {
+    animation: leftDiv .5s;
+    z-index: 2;
+    width: 85%;
+}
+@keyframes leftDiv{
+    from{
+        width: 50%;
+    }
+    to{
+        width: 85%;
+    }
+}
+.sp-left h1{
+    color: #ffffff;
+    width: 212px;
+    white-space: nowrap;
+}
+.sp-left:hover h1{
+    border-bottom: 4px #ffffff solid;
+    animation: left-h1 .5s;
+}
+@keyframes left-h1{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 212px;
+    }
+}
+.sp-left a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 120px;
+    height: 50px;
+    border: 2px #ffffff solid;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sp-left a:hover{
+    border-bottom: 6px #ffffff solid;
+    animation: left-a .2s;
+}
+@keyframes left-a{
+    from{
+        border-bottom: 2px #ffffff solid;
+    }
+    to{
+        border-bottom: 6px #ffffff solid;
+    }
+}
+.sp-right{
+    background: linear-gradient(#118cff80, #118cff80), url('https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+.sp-right:hover{
+    animation: rightDiv .5s;
+    z-index: 2;
+    width: 85%;
+}
+@keyframes rightDiv{
+    from{
+        width: 50%;
+    }
+    to{
+        width: 85%;
+    }
+}
+.sp-right h1{
+    color: #ffffff;
+    width: 306px;
+}
+.sp-right:hover h1{
+    border-bottom: 4px #ffffff solid;
+    animation: right-h1 .5s;
+}
+@keyframes right-h1{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 306px;
+    }
+}
+.sp-right a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 120px;
+    height: 50px;
+    border: 2px #ffffff solid;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sp-right a:hover{
+    border-bottom: 6px #ffffff solid;
+    animation: right-a .2s;
+}
+@keyframes right-a{
+    from{
+        border-bottom: 2px #ffffff solid;
+    }
+    to{
+        border-bottom: 6px #ffffff solid;
+    }
+}
