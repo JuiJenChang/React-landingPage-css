@@ -6,48 +6,50 @@ class SlidePage extends Component {
         super(props)
 
         this.state = {
-            leftHover: false,
-            rightHover: false,
+            leftWidth: '50%',
+            rightWidth: '50%',
         }
     }
 
     onMouseEnterLeft = () => {
         this.setState({
-            rightHover: true,
+            leftWidth: '85%',
+            rightWidth: '15%',
         })
     }
-
     onMouseLeaveLeft = () => {
         this.setState({
-            rightHover: false,
+            leftWidth: '50%',
+            rightWidth: '50%',
         })
     }
 
     onMouseEnterRight = () => {
         this.setState({
-            leftHover: true,
+            leftWidth: '15%',
+            rightWidth: '85%',
+        })
+    }
+    onMouseLeaveRight = () => {
+        this.setState({
+            leftWidth: '50%',
+            rightWidth: '50%',
         })
     }
 
-    onMouseLeaveRight = () => {
-        this.setState({
-            leftHover: false,
-        })
-    }
-    
     render() {
         return (
             <div>
                 <div className="sp-left"
                     onMouseEnter={this.onMouseEnterLeft} onMouseLeave={this.onMouseLeaveLeft}
-                    style={this.state.leftHover? {width: '15%'} : {width: '50%'} }
+                    style={{ width: this.state.leftWidth }}
                 >
                     <h1>CG Generalist</h1>
                     <a href="#" >LET'S GO</a>
                 </div>
                 <div className="sp-right"
                     onMouseEnter={this.onMouseEnterRight} onMouseLeave={this.onMouseLeaveRight}
-                    style={this.state.rightHover? {width: '15%'} : {width: '50%'} }
+                    style={{ width: this.state.rightWidth }}
                 >
                     <h1>Designer/Developer</h1>
                     <a href="#" >LET'S GO</a>
