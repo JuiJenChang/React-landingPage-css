@@ -83,6 +83,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: 1;
+    transition: all 0.5s;
 }
 .sp-right:before{
     content: '';

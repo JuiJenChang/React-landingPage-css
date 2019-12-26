@@ -39,7 +39,7 @@ class SlidePage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container" >
                 <div className="sp-left"
                     onMouseEnter={this.onMouseEnterLeft} onMouseLeave={this.onMouseLeaveLeft}
                     style={{ width: this.state.leftWidth }}
