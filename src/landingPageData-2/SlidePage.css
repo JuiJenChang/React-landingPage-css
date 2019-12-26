@@ -11,20 +11,22 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 1;
-}
-.sp-left:hover {
-    animation: leftDiv .5s;
     z-index: 2;
-    width: 85%;
+    transition: all 0.5s;
 }
-@keyframes leftDiv{
-    from{
-        width: 50%;
-    }
-    to{
-        width: 85%;
-    }
+.sp-left:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s;
+}
+.sp-left:hover:before{
+    width: 85%;
 }
 .sp-left h1{
     color: #ffffff;
@@ -82,18 +84,19 @@
     align-items: center;
     z-index: 1;
 }
-.sp-right:hover{
-    animation: rightDiv .5s;
-    z-index: 2;
-    width: 85%;
+.sp-right:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s;
 }
-@keyframes rightDiv{
-    from{
-        width: 50%;
-    }
-    to{
-        width: 85%;
-    }
+.sp-right:hover:before{
+    width: 85%;
 }
 .sp-right h1{
     color: #ffffff;
